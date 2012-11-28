@@ -1,0 +1,17 @@
+<!-- START SUBS CONTAINER -->
+<span class="menuanchor" id="chicken"></span>
+		<div class="menucontainer">
+			<!-- START SUBS CONTENT -->
+			<div id="subscontent" class="menucontent">
+				<h1>Grilled</br>Subs</h1>
+				<h2>Better than your average sandwich, guaranteed! Our grilled subs are fully loaded with your favourite freshly grilled fillings, crunchy salad and served on a 6 inch or foot long gourmet deli sub toasted to perfection. Seriously stacked sandwiches!</h2>
+					<% @subs.each do |sub| %>
+					<div id="menuitem">
+					<h3><%= sub.item%></h3>
+					<p><%= sub.description%></p>
+					</div>
+					<% end %>
+			</div>
+			<!-- END SUBS CONTENT -->
+		</div>
+		<!-- END SUBS CONTAINER -->

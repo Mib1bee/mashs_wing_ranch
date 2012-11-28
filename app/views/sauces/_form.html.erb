@@ -1,0 +1,27 @@
+<%= error_messages_for(@sauce) %>
+<table summary="Sauces Form Fields">
+  <tr>
+    <th><%= f.label(:name,"Sauce Name") %></th>
+    <td><%= f.text_field(:name) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:description, "Description") %></th>
+    <td><%= f.text_area(:description, :size => '40x5') %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:heat_level, "Heat Level") %></th>
+    <td><%= f.select(:heat_level, @heat_level_list.map { |value| [ value, value ] }) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:pic_url, "Picture URL") %></th>
+    <td><%= f.text_field(:pic_url) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:title_colour, "Title Colour") %></th>
+    <td><%= f.text_field(:title_colour) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:description_colour, "Desc Colour") %></th>
+    <td><%= f.text_field(:description_colour) %></td>
+  </tr>
+</table>

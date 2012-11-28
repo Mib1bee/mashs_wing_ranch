@@ -1,0 +1,5 @@
+<center>
+	<%= form_for(:menu, :url => {:action => 'destroy', :id => @menu.id}) do |f| -%>
+		<%= submit_tag("Permenantly Delete", :class => "buttons") %>    
+	<% end %>
+<center>

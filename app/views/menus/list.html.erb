@@ -1,0 +1,155 @@
+  <%= render :partial => "shared/newlink" %>
+
+<center>
+  <h1 class="categoryheading">Chicken Category - <%= pluralize(@chicken.size, 'Item') %> found</h1>
+  <table class="listing" summary="Chicken Items">
+    <tr>
+      <th>#</th>
+      <th>Item Name</th>
+      <th>Actions</th>
+    </tr>
+    <% @chicken.each_with_index do |chickenitem, i| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= i + 1 %></td>
+      <td><%= chickenitem.item %></td>
+      <td>
+        <%= link_to("Show", {:action => 'show', :id => chickenitem.id}, :class => 'buttons') %>
+        <%= link_to("Edit", {:action => 'edit', :id => chickenitem.id}, :class => 'buttons') %>
+        <%= link_to("Delete", {:action => 'delete', :id => chickenitem.id}, :class => 'buttons') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</center>
+</br>
+<center>
+  <h1 class="categoryheading">Burgers Category - <%= pluralize(@burgers.size, 'Item') %> found</h1>
+  <table class="listing" summary="Burger Items">
+    <tr>
+      <th>#</th>
+      <th>Item Name</th>
+      <th>Actions</th>
+    </tr>
+    <% @burgers.each_with_index do |burger, i| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= i + 1 %></td>
+      <td><%= burger.item %></td>
+      <td>
+        <%= link_to("Show", {:action => 'show', :id => burger.id}, :class => 'buttons') %>
+        <%= link_to("Edit", {:action => 'edit', :id => burger.id}, :class => 'buttons') %>
+        <%= link_to("Delete", {:action => 'delete', :id => burger.id}, :class => 'buttons') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</center>
+</br>
+<center>
+  <h1 class="categoryheading">Hot Dogs Category - <%= pluralize(@hotdogs.size, 'Item') %> found</h1>
+  <table class="listing" summary="Hot Dog Items">
+    <tr>
+      <th>#</th>
+      <th>Item Name</th>
+      <th>Actions</th>
+    </tr>
+    <% @hotdogs.each_with_index do |hotdog, i| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= i + 1 %></td>
+      <td><%= hotdog.item %></td>
+      <td>
+        <%= link_to("Show", {:action => 'show', :id => hotdog.id}, :class => 'buttons') %>
+        <%= link_to("Edit", {:action => 'edit', :id => hotdog.id}, :class => 'buttons') %>
+        <%= link_to("Delete", {:action => 'delete', :id => hotdog.id}, :class => 'buttons') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</center>
+</br>
+<center>
+  <h1 class="categoryheading">Grilled Subs Category - <%= pluralize(@subs.size, 'Item') %> found</h1>
+  <table class="listing" summary="Grilled Sub Items">
+    <tr>
+      <th>#</th>
+      <th>Item Name</th>
+      <th>Actions</th>
+    </tr>
+    <% @subs.each_with_index do |sub, i| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= i + 1 %></td>
+      <td><%= sub.item %></td>
+      <td>
+        <%= link_to("Show", {:action => 'show', :id => sub.id}, :class => 'buttons') %>
+        <%= link_to("Edit", {:action => 'edit', :id => sub.id}, :class => 'buttons') %>
+        <%= link_to("Delete", {:action => 'delete', :id => sub.id}, :class => 'buttons') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</center>
+</br>
+<center>
+  <h1 class="categoryheading">Wraps & Salads Category - <%= pluralize(@wraps_salads.size, 'Item') %> found</h1>
+  <table class="listing" summary="Wraps & Salads Items">
+    <tr>
+      <th>#</th>
+      <th>Item Name</th>
+      <th>Actions</th>
+    </tr>
+    <% @wraps_salads.each_with_index do |wrap, i| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= i + 1 %></td>
+      <td><%= wrap.item %></td>
+      <td>
+        <%= link_to("Show", {:action => 'show', :id => wrap.id}, :class => 'buttons') %>
+        <%= link_to("Edit", {:action => 'edit', :id => wrap.id}, :class => 'buttons') %>
+        <%= link_to("Delete", {:action => 'delete', :id => wrap.id}, :class => 'buttons') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</center>
+</br>
+<center>
+  <h1 class="categoryheading">Sizzlers Category - <%= pluralize(@sizzlers.size, 'Item') %> found</h1>
+  <table class="listing" summary="Sizzlers Items">
+    <tr>
+      <th>#</th>
+      <th>Item Name</th>
+      <th>Actions</th>
+    </tr>
+    <% @sizzlers.each_with_index do |sizzler, i| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= i + 1 %></td>
+      <td><%= sizzler.item %></td>
+      <td>
+        <%= link_to("Show", {:action => 'show', :id => sizzler.id}, :class => 'buttons') %>
+        <%= link_to("Edit", {:action => 'edit', :id => sizzler.id}, :class => 'buttons') %>
+        <%= link_to("Delete", {:action => 'delete', :id => sizzler.id}, :class => 'buttons') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</center>
+</br>
+<center>
+  <h1 class="categoryheading">Sides Category - <%= pluralize(@sides.size, 'Item') %> found</h1>
+  <table class="listing" summary="Sides Items">
+    <tr>
+      <th>#</th>
+      <th>Item Name</th>
+      <th>Actions</th>
+    </tr>
+    <% @sides.each_with_index do |side, i| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= i + 1 %></td>
+      <td><%= side.item %></td>
+      <td>
+        <%= link_to("Show", {:action => 'show', :id => side.id}, :class => 'buttons') %>
+        <%= link_to("Edit", {:action => 'edit', :id => side.id}, :class => 'buttons') %>
+        <%= link_to("Delete", {:action => 'delete', :id => side.id}, :class => 'buttons') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</center>

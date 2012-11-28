@@ -1,0 +1,101 @@
+<div id="personaldetails">
+	<p class="forminstructions">Fields Marked With An * Are Mandatory. Thanks!</p>
+	<h3 class="formsection">Personal Details</h3>
+	<table summary="Personal Details" class="franchiseapplication">
+		<tr>
+			<th><%= f.label(:title, "* Title") %></th>
+			<td><%= f.select(:title, @title_list.map { |value| [ value, value ] }) %><td>
+		</tr>
+		<tr>
+			<th><%= f.label(:first_name, "* Forename") %></th>
+			<td><%= f.text_field(:first_name) %><td>
+		</tr>
+		<tr>
+			<th><%= f.label(:second_name, "* Surname") %></th>
+			<td><%= f.text_field(:second_name) %><td>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+			<th><%= f.label(:address_line_1, "* Address") %></th>
+			<td><%= f.text_field(:address_line_1) %><td>
+		</tr>
+		<tr>
+			<th><%= f.label(:address_line_2, "Address Con..") %></th>
+			<td><%= f.text_field(:address_line_2) %><td>
+		</tr>
+		<tr>
+			<th><%= f.label(:town_city, "* Town/City") %></th>
+			<td><%= f.text_field(:town_city) %><td>
+		</tr>
+		<tr>
+			<th><%= f.label(:country, "* Country") %></th>
+			<td><%= f.select(:country, @country_list.map { |value| [ value, value ] } ,:selected =>  "United Kingdom") %><td>
+		</tr>
+		<tr>
+			<th><%= f.label(:postcode, "* Postcode/Zip Code") %></th>
+			<td><%= f.text_field(:postcode) %><td>
+		</tr>
+	</table>
+</div>
+
+<div id="contactdetails">
+	<h3 class="formsection">Contact Details</h3>
+	<table summary="Contact Details" class="franchiseapplication">
+		<tr>
+			<th><%= f.label(:telephone, "* Contact Number") %></th>
+			<td><%= f.text_field(:telephone) %><td>
+		</tr>
+		<tr>
+			<th><%= f.label(:alternative_telephone, "Alternative Contact") %></th>
+			<td><%= f.text_field(:alternative_telephone) %><td>
+		</tr>
+		<tr>
+			<th><%= f.label(:email, "* Email") %></th>
+			<td><%= f.text_field(:email) %><td>
+		</tr>
+		<tr>
+			<th><%= f.label(:preferred_contact, "Pref Method Of Contact") %></th>
+			<td><%= f.select(:preferred_contact, @pref_cont_list.map { |value| [ value, value ] } ,:selected =>  "Main Number") %><td>
+		</tr>
+		<tr>
+			<th><%= f.label(:preferred_contact_time, "Pref Time Of Contact") %></th>
+			<td><%= f.select(:preferred_contact_time, @pref_cont_time_list.map { |value| [ value, value ] } ,:selected =>  "Evening") %><td>
+		</tr>
+	</table>
+</div>
+
+<div id="franchisedetails">
+	<h3 class="formsection">Franchise Details</h3>
+	<table summary="Franchise Details" class="franchiseapplication">
+		<tr>
+			<th><%= f.label(:investment, "* Available Investment") %></th>
+			<td><%= f.select(:investment, @inv_list.map { |value| [ value, value ] } ,:selected =>  "£25,000 to £50,000") %><td>
+		</tr>
+		<tr>
+			<th><%= f.label(:location_country, "* Desired Country") %></th>
+			<td><%= f.select(:location_country, @country_list.map { |value| [ value, value ] } ,:selected =>  "United Kingdom") %><td>
+		</tr>
+		<tr>
+			<th><%= f.label(:location_town_city, "* Desired Town/City") %></th>
+			<td><%= f.text_field(:location_town_city) %><td>
+		</tr>
+		<tr>
+			<th><%= f.label(:timeframe, "* Timeframe To Invest") %></th>
+			<td><%= f.select(:timeframe, @timeframe_list.map { |value| [ value, value ] } ,:selected =>  "Just Making An Enquiry") %><td>
+		</tr>
+	</table>
+</br>
+	<%= submit_tag("Submit",:class => 'buttons') %>
+</div>
+
+<div id="extradetails">
+	<h3 class="formsection">Extra Details</h3>
+	<table summary="Extra Details" class="franchiseapplication">
+		<tr>
+			<%= f.label(:extra, "Extra Information / Questions?") %>
+		</br></br>
+			<%= f.text_area(:extra) %>
+		</tr>
+	</table>
+</div>

@@ -1,0 +1,17 @@
+<!-- START SIDES CONTAINER -->
+<span class="menuanchor" id="chicken"></span>
+		<div class="menucontainer">
+			<!-- START SIDES CONTENT -->
+			<div id="sidescontent" class="menucontent">
+				<h1>Mash's</br>Sides</h1>
+				<h2>A little something on the side perhaps? Go on, you know you want to! Don’t let your food get lonely. A Fantastic selection of sidekicks or a super starting line up to line your hungry bellies!</h2>
+					<% @sides.each do |side| %>
+					<div id="menuitem">
+					<h3><%= side.item%></h3>
+					<p><%= side.description%></p>
+					</div>
+					<% end %>
+			</div>
+			<!-- END SIDES CONTENT -->
+		</div>
+		<!-- END SIDES CONTAINER -->

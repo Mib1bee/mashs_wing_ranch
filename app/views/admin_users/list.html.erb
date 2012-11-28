@@ -1,0 +1,27 @@
+  <center>
+  <p class="recordnumber"><%= pluralize(@admin_users.size, 'Admin User') %> found<p>
+  <%= render :partial => "shared/newlink" %>
+
+  
+  <table class="listing" summary="Admin User List">
+    <tr>
+      <th>#</th>
+      <th>Username</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+    <% @admin_users.each_with_index do |admin_user, i| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= i + 1 %></td>
+      <td><%= admin_user.username %></td>
+      <td><%= admin_user.name %></td>
+      <td><%= mail_to(admin_user.email) %></td>
+      <td>
+        <%= link_to("Edit", {:action => 'edit', :id => admin_user.id}, :class => 'buttons') %>
+        <%= link_to("Delete", {:action => 'delete', :id => admin_user.id}, :class => 'buttons') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</center>

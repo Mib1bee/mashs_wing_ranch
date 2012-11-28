@@ -1,0 +1,31 @@
+  <center>
+  <p class="recordnumber"><%= pluralize(@ranches.size, 'Ranch') %> found<p>
+
+  <%= render :partial => "shared/newlink" %>
+
+  <table class="listing" summary="Ranches">
+    <tr>
+      <th>#</th>
+      <th>Ranch Name</th>
+      <th>Address</th>
+      <th>Telephone</th>
+      <th>Longitude</th>
+      <th>Latidtude</th>
+      <th>Actions</th>
+    </tr>
+    <% @ranches.each_with_index do |ranch, i| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= i + 1 %></td>
+      <td><%= ranch.name %></td>
+      <td><%= ranch.address_line_1 %>,</br><%= ranch.town_city %>,</br><%= ranch.postcode %></td>
+      <td><%= ranch.telephone %></td>
+      <td><%= ranch.longitude %></td>
+      <td><%= ranch.latitude %></td>
+      <td>
+        <%= link_to("Edit", {:action => 'edit', :id => ranch.id}, :class => 'buttons') %>
+        <%= link_to("Delete", {:action => 'delete', :id => ranch.id}, :class => 'buttons') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</center>

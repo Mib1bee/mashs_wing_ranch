@@ -1,0 +1,6 @@
+<center>
+<%= form_for(:menu, :url => {:action => 'update', :id => @menu.id}) do |f| %>
+	<%= render(:partial => "form", :locals => {:f => f}) %>
+    <%= submit_tag("Update Item",:class => "buttons") %>
+<% end %>
+</center>

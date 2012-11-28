@@ -1,0 +1,18 @@
+<!-- START CHICKEN CONTAINER -->
+<span class="menuanchor" id="chicken"></span>
+		<div class="menucontainer">
+			<!-- START CHICKEN CONTENT -->
+			<div id="chickencontent" class="menucontent">
+				<h1>Mash's Famous</br>Chicken</h1>
+				<h2>Serving lip smackin' wings and more since 1995. Did you know we were the first dedicated
+					food outlet to introduce Authentic Buffalo Wings in the UK!</h2>
+					<% @chicken.each do |chicken| %>
+					<div id="menuitem">
+					<h3><%= chicken.item%></h3>
+					<p><%= chicken.description%></p>
+					</div>
+					<% end %>
+			</div>
+			<!-- END CHICKEN CONTENT -->
+		</div>
+		<!-- END CHICKEN CONTAINER -->

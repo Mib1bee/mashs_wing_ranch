@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>Mash's Wing Ranch&reg; | <%= @page_title || 'Admin Area' %></title>
+	<%= stylesheet_link_tag('admin_main', :media => 'all') %>
+</head>
+
+
+<body>
+
+	<div id="headercontainer">
+		<div id="headercontent">
+			<div id="headerlogo"></div>
+			<div id="headernavigation">
+				<ul>
+					<li><%= link_to("Users", {:controller => 'admin_users', :action => 'list'}) %></li>
+					<li><%= link_to("Menu", {:controller => 'menus', :action => 'list'}) %></li>
+					<li><%= link_to("Sauces", {:controller => 'sauces', :action => 'list'}) %></li>
+					<li><%= link_to("Ranches", {:controller => 'ranches', :action => 'list'}) %></li>
+					<li><%= link_to("Franchise", {:controller => 'franchises', :action => 'list'}) %></li>
+					<li><%= link_to("Mailing List", {:controller => 'mailing_lists', :action => 'list'}) %></li>
+				</ul>
+			</div>
+			<div id="headerinformation">
+				<p>Admin Area</p>
+				<p><%= Time.now.strftime("%d/%m/%Y") %></p>
+				<p><%= Time.now.strftime("%I:%M%p") %></p>
+				<p>User - <%= session[:first_name] %> <%= session[:last_name] %></p>
+				<p><%= link_to("Log Out", :controller => 'access', :action => 'logout') %></p>
+			</div>
+		</div>
+	</div>
+
+	<div id="pagetitlecontainer">
+		<div id="pagetitlecontent">
+			<h3><%= @pagetitle %></h3>
+		</div>
+	</div>
+
+	<% if !flash[:notice].blank? %>
+	<div id="noticecontainer">
+		<div id="noticecontent">
+      		<h4 class="notice">
+            <%= flash[:notice] %>
+		</div>
+	</div>
+	<% end %>
+
+	<% if !flash[:error].blank? %>
+	<div id="errornoticecontainer">
+		<div id="errornoticecontent">
+      		<h4 class="notice">
+            <%= flash[:error] %>
+		</div>
+	</div>
+	<% end %>
+
+	<div id="contentcontainer">
+		<div id="content"><%= yield %></div>
+	</div>
+
+	<div id="footercontainer">
+		<div id="footercontent">
+			<p>Mash's Wing Ranch&reg; All Rights Reserved 2012</p>
+		</div>
+	</div>
+
+	
+
+
+</body>
+</html>

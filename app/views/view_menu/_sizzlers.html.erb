@@ -1,0 +1,17 @@
+<!-- START BURGER CONTAINER -->
+<span class="menuanchor" id="chicken"></span>
+		<div class="menucontainer">
+			<!-- START BURGER CONTENT -->
+			<div id="sizzlerscontent" class="menucontent">
+				<h1>Teppanyaki &</br>Sizzler's</h1>
+				<h2>This one’s a little left field but nevertheless a real favourite at MWR. A hearty selection of delectable meat and poultry cooked sizzled on an iron hot plate and served fresh to order. Steak, chicken, donner meat or a combo of the meats. An authentic Eastern treat</h2>
+					<% @sizzlers.each do |sizzler| %>
+					<div id="menuitem">
+					<h3><%= sizzler.item%></h3>
+					<p><%= sizzler.description%></p>
+					</div>
+					<% end %>
+			</div>
+			<!-- END BURGER CONTENT -->
+		</div>
+		<!-- END BURGER CONTAINER -->

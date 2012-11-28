@@ -1,0 +1,6 @@
+<center>
+<%= form_for(:sauce, :url => {:action => 'update', :id => @sauce.id}) do |f| %>
+	<%= render(:partial => "form", :locals => {:f => f}) %>
+    <%= submit_tag("Update Sauce",:class => "buttons") %>
+<% end %>
+</center>

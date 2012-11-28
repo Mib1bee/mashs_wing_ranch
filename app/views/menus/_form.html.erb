@@ -1,0 +1,15 @@
+<%= error_messages_for(@menu) %>
+<table summary="Menu Form Fields">
+  <tr>
+    <th><%= f.label(:category, "Category") %></th>
+    <td><%= f.select(:category, @category_list.map { |value| [ value, value ] }) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:item, "Item Name") %></th>
+    <td><%= f.text_field(:item) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:description, "Item Description") %></th>
+    <td><%= f.text_area(:description, :size => '40x5') %></td>
+  </tr>
+</table>

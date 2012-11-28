@@ -1,0 +1,5 @@
+<center>
+	<%= form_for(:mailing_list, :url => {:action => 'destroy', :id => @mailing.id}) do |f| -%>
+		<%= submit_tag("Permenantly Delete", :class => "buttons") %>    
+	<% end %>
+<center>

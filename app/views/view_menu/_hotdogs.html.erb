@@ -1,0 +1,17 @@
+<!-- START HOT DOG CONTAINER -->
+<span class="menuanchor" id="chicken"></span>
+		<div class="menucontainer">
+			<!-- START HOT DOG CONTENT -->
+			<div id="hotdogcontent" class="menucontent">
+				<h1>Mash's Hot</br>Dog Cart&trade;</h1>
+				<h2>Try our legendary hotdogs, famous for their authentic American gourmet style and great taste! We have 		created a varied combination of delicious hotdogs for all tastes, so try one today; you must be barking 	mad not to!</h2>
+					<% @hotdogs.each do |hotdog| %>
+					<div id="menuitem">
+					<h3><%= hotdog.item%></h3>
+					<p><%= hotdog.description%></p>
+					</div>
+					<% end %>
+			</div>
+			<!-- END HOT DOG CONTENT -->
+		</div>
+		<!-- END HOT DOG CONTAINER -->

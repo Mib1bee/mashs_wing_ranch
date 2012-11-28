@@ -1,0 +1,62 @@
+<!-- START SAUCES CONTAINER -->
+		<span class="anchor" id="sauces"></span>
+		<div id="saucescontainer">
+			<!-- START SAUCES CONTENT -->
+			<div id="saucescontent">
+				<!-- START SAUCES HEADING -->
+				<div id="saucesheading">
+					<!-- START SAUCES HEADING H1 -->
+					<h1>Get Saucy !</h1>
+					<!-- END SAUCES HEADING H1 -->
+				</div>
+				<!-- END FRANCHISE HEADING -->
+				<!-- START SAUCES SPLATTER -->
+				<div id="saucesbottle"><img src="<%= asset_path('sauces/sauces_bottle.png') %>"/></div>
+				<!-- END SAUCES SPLATTER -->
+				<!-- START SAUCES WRITING -->
+				<div id="sauceswriting">
+					<p class="writing">
+						Mash's Wing Ranch&reg; is famous for its lip smackin' 
+						sauces, hence we coined the phrase
+						"the secret's in the sauce!" Want to know 
+						our sauces better? Go through the sauces below
+						and learn what makes our food the best in 
+						taste. But if you really want to get intimate 
+						with our sauces then you're just gonna have 
+						to get to one of our ranches and taste them!
+					</p>
+				</div>
+				<!-- END SAUCES WRITING -->
+				<!-- START SAUCES SLIDER -->
+				<div id="sacuespos">
+<div class="sauces-wrap">
+<ul id="sauces_slider">
+    <% @sauces.each do |sauce| %>
+    <li>
+    	<div class="saucesouter">
+    		<%= image_tag("#{sauce.pic_url}", :class => "saucepic") %>
+    		<span style="color:<%= sauce.title_colour %>;">
+    			<h3 class="saucetitle"><%= sauce.name %></h3>
+    		</span>
+    		<span style="color:<%= sauce.description_colour %>;">
+					<p class="saucetext"><%= sauce.description %></p>
+			</span>
+			<div class="flames">
+				<ul>
+					<% sauce.heat_level.times do %>
+						<%= image_tag("sauces/sauces_flame.png", :class => "flamespic") %>
+					<% end %>
+				</ul>
+			</div>
+    	</div>
+    </li>
+    <% end %>	
+</ul>
+</div>
+</div>
+				<!-- END SAUCES SLIDER -->
+			</div>
+			<!-- END SAUCES CONTENT -->
+
+		</div>
+		<!-- END SAUCES CONTAINER -->

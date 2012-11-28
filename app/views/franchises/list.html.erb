@@ -1,0 +1,26 @@
+  <center>
+  <p class="recordnumber"><%= pluralize(@franchises.size, 'Franchise Application') %> found<p>
+
+
+  <table class="listing" summary="Franchise Applications">
+    <tr>
+      <th>#</th>
+      <th>Date Of Application</th>
+      <th>Name</th>
+      <th>Telephone</th>
+      <th>Actions</th>
+    </tr>
+    <% @franchises.each do |franchisee| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= franchisee.id %></td>
+      <td><%= franchisee.created_at.strftime("%d/%m/%Y") %></td>
+      <td><%= franchisee.first_name %> <%= franchisee.second_name %></td>
+      <td><%= franchisee.telephone %></td>
+      <td>
+        <%= link_to("Show", {:action => 'show', :id => franchisee.id}, :class => 'buttons') %>
+        <%= link_to("Delete", {:action => 'delete', :id => franchisee.id}, :class => 'buttons') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</center>

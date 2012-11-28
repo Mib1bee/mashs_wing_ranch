@@ -1,0 +1,17 @@
+<!-- START WRAPS AND SALADS CONTAINER -->
+<span class="menuanchor" id="chicken"></span>
+		<div class="menucontainer">
+			<!-- START WRAPS AND SALADS CONTENT -->
+			<div id="wrapsnsaladscontent" class="menucontent">
+				<h1>Wraps</br>& Salads</h1>
+				<h2>At MWR we do great tasting wraps. It’s all about what’s on the INSIDE that makes our wraps so fabulous! We’re talking about fresh and crispy veggies, tasty sauces, melted cheeses and hot cooked fresh juicy meats. Or if you want to lose the bread altogether then why not let us assemble for you a freshly prepared salad and enjoy the best of the garden, served with a tempting choice of fillings and dressings.</h2>
+					<% @wraps_salads.each do |wrap_salad| %>
+					<div id="menuitem">
+					<h3><%= wrap_salad.item%></h3>
+					<p><%= wrap_salad.description%></p>
+					</div>
+					<% end %>
+			</div>
+			<!-- END WRAPS AND SALADS CONTENT -->
+		</div>
+		<!-- END WRAPS AND SALADS CONTAINER -->

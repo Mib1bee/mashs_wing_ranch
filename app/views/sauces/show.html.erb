@@ -1,0 +1,12 @@
+      <div class="saucesouter" style="position:relative;top:50px;">
+        <%= image_tag("#{@sauce.pic_url}", :class => "saucepic") %>
+          <h3 class="saucetitle"><%= @sauce.name %></h3>
+          <p class="saucetext"><%= @sauce.description %></p>
+      <div class="flames">
+        <ul>
+          <% @sauce.heat_level.times do %>
+            <%= image_tag("sauces/sauces_flame.png", :class => "flamespic") %>
+          <% end %>
+        </ul>
+      </div>
+      </div>

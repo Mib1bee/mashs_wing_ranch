@@ -1,0 +1,36 @@
+<!-- START FRANCHISE CONTAINER -->
+<div id="franchisecontainer">
+	<!-- START FRANCHISE CONTENT -->
+	<div id="franchisecontent">
+		<div id="franchisebull"></div>
+		<div id="franchiseheading">
+			<h2>Grab The Bull By The Horns!</h2>
+			<h1>Franchise</br>Application</h1>
+		</div>
+		<div id="franchiselinks">
+			<%= link_to "Franchise Information Pack ", asset_path('franchise/franchise_info_pack.pdf'), :class => "links" %>
+			</br></br>
+			<%= link_to '#terms', :id => 'terms_franchise', :class => 'links' do %>
+		    Terms Of Use
+			<% end %>
+			<%= link_to root_path(:controller => 'main'), :class => 'links' do %>
+			Back To Main
+			<% end %>
+		</div>
+		<% if !flash[:error].blank? %>
+			<div id="noticecontent">
+      			<h4 class="noticeerror"><%= flash[:error] %></h4>
+			</div>
+		<% end %>
+		<% if !flash[:notice].blank? %>
+			<div id="noticecontent">
+      			<h4 class="noticesuccess"><%= flash[:notice] %></h4>
+			</div>
+		<% end %>
+		<%= form_for(:franchise, :url => {:action => 'create'}) do |f| %>
+    		<%= render(:partial => "form", :locals => {:f => f}) %>    
+    	<% end %>
+	</div>
+	<!-- END FRANCHISE CONTENT -->
+</div>
+<!-- END FRANCHISE CONTAINER -->

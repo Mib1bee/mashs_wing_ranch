@@ -1,0 +1,2 @@
+module FranchiseAppHelper
+end

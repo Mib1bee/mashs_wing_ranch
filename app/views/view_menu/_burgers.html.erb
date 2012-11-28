@@ -1,0 +1,19 @@
+<!-- START BURGER CONTAINER -->
+<span class="menuanchor" id="chicken"></span>
+		<div class="menucontainer">
+			<!-- START BURGER CONTENT -->
+			<div id="burgercontent" class="menucontent">
+				<h1>Signature</br>Burgers</h1>
+				<h2>Seasoned & Seared, Grilled or Fried to perfection. Every burger we serve is hot, 
+					juicy and fully loaded with flavour. These appetite crushing combinations are something 
+					we’re known for and one of the reasons our fans keep coming back for more.</h2>
+					<% @burgers.each do |burger| %>
+					<div id="menuitem">
+					<h3><%= burger.item%></h3>
+					<p><%= burger.description%></p>
+					</div>
+					<% end %>
+			</div>
+			<!-- END BURGER CONTENT -->
+		</div>
+		<!-- END BURGER CONTAINER -->

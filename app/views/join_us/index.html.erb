@@ -1,0 +1,35 @@
+<!-- START FRANCHISE CONTAINER -->
+<div id="rewardscontainer">
+	<!-- START FRANCHISE CONTENT -->
+	<div id="rewardscontent">
+		<div id="rewardsbull"></div>
+		<div id="rewardscard"></div>
+		<div id="rewardsheading">
+			<h2>Are You In Or Out ?</h2>
+			<h1>Ranch</br>Rewards</h1>
+		</div>
+		<div id="rewardslinks">
+			<%= link_to '#terms', :id => 'terms_franchise', :class => 'links' do %>
+		    Terms Of Use
+			<% end %>
+			<%= link_to root_path(:controller => 'main'), :class => 'links' do %>
+			   Back To Main
+			<% end %>
+		</div>
+		<% if !flash[:error].blank? %>
+			<div id="noticecontent">
+      			<h4 class="noticeerror"><%= flash[:error] %></h4>
+			</div>
+		<% end %>
+		<% if !flash[:notice].blank? %>
+			<div id="noticecontent">
+      			<h4 class="noticesuccess"><%= flash[:notice] %></h4>
+			</div>
+		<% end %>
+		<%= form_for(:mailing_list, :url => {:action => 'create'}) do |f| %>
+    		<%= render(:partial => "form", :locals => {:f => f}) %>    
+    	<% end %>
+	</div>
+	<!-- END FRANCHISE CONTENT -->
+</div>
+<!-- END FRANCHISE CONTAINER -->

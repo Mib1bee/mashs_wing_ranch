@@ -1,0 +1,28 @@
+  <center>
+  <p class="recordnumber"><%= pluralize(@sauces.size, 'Sauce') %> found<p>
+
+  <%= render :partial => "shared/newlink" %>
+
+  <table class="listing" summary="Sauces">
+    <tr>
+      <th>#</th>
+      <th>Sauce Name</th>
+      <th>Heat Level</th>
+      <th>Picture Location</th>
+      <th>Actions</th>
+    </tr>
+    <% @sauces.each_with_index do |sauce, i| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= i + 1 %></td>
+      <td><%= sauce.name %></td>
+      <td><%= sauce.heat_level %></td>
+      <td><%= sauce.pic_url %></td>
+      <td>
+        <%= link_to("Show", {:action => 'show', :id => sauce.id}, :class => 'buttons') %>
+        <%= link_to("Edit", {:action => 'edit', :id => sauce.id}, :class => 'buttons') %>
+        <%= link_to("Delete", {:action => 'delete', :id => sauce.id}, :class => 'buttons') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</center>

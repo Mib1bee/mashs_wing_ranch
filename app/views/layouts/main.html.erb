@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Mash's Wing Ranch&reg;</title>
+	<%= stylesheet_link_tag('main', :media => 'all') %>
+	<%= javascript_include_tag ('jquery/jquery.min','jq_scroll/jq_scroll_to','jq_scroll/jq_animate','jq_scroll/jq_anchor_scroll','jq_scroll/jq_local_scroll','jq_slider/jq_easing','jq_slider/jq_box_slider','jq_slider/jq_box','jq_parallax/jq_parallax','js_actions/do_parallax','js_actions/do_scrolling','js_actions/do_slider') %>
+	<%= stylesheet_link_tag "gmaps4rails" %>
+	<%= javascript_include_tag ('gmaps4rails/gmaps4rails.base','gmaps4rails/gmaps4rails.bing','gmaps4rails/gmaps4rails.googlemaps','gmaps4rails/gmaps4rails.mapquest','gmaps4rails/gmaps4rails.openlayers') %>
+<script type="text/javascript">
+$(document).ready(function(){
+	main_parallax();
+    main_scrolling();
+    sauces_slider();
+});
+</script>
+
+</head>
+
+<body>
+	<%= yield :scripts %>
+<div id="bodycontainer">
+	<%= render :partial => "shared/header" %>
+	<%= yield %>
+</div>
+
+</body>
+
+</html>

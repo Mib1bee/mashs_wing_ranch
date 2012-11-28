@@ -1,0 +1,6 @@
+<center>
+	<%= form_for(:admin_user, :url => {:action => 'create'}) do |f| %>
+		<%= render(:partial => "form", :locals => {:f => f}) %>    
+		<%= submit_tag("Submit",:class => 'buttons') %>    
+	<% end %>
+</center>

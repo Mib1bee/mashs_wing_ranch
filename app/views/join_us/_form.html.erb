@@ -1,0 +1,23 @@
+<div id="rewardsform">
+	<p class="forminstructions">Fields Marked With An * Are Mandatory. Thanks!</p>
+	<h3 class="formsection">Personal Details</h3>
+	<table summary="Personal Details" class="rewardsapplication">
+		<tr>
+			<th><%= f.label(:first_name, "* Forename") %></th>
+			<td><%= f.text_field(:first_name) %><td>
+		</tr>
+		<tr>
+			<th><%= f.label(:second_name, "* Surname") %></th>
+			<td><%= f.text_field(:second_name) %><td>
+		</tr>
+		<tr>
+			<th><%= f.label(:email, "* Email Address") %></th>
+			<td><%= f.text_field(:email) %><td>
+		</tr>
+		<tr>
+			<th><%= f.label(:company_name, " Company Name") %></br><p class="extrainfo">(For Corporate Offers)</p></th>
+			<td><%= f.text_field(:company_name) %><td>
+		</tr>
+	</table>
+	<%= submit_tag("Submit",:class => 'buttons') %>
+</div>

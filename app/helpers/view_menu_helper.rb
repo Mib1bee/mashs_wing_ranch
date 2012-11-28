@@ -1,0 +1,2 @@
+module ViewMenuHelper
+end

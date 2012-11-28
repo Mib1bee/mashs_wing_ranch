@@ -1,0 +1,24 @@
+<div id="mapscontainer">
+<%= gmaps("markers" => {"data" => @json, "options" => {"list_container" => "ranchlist"}}, 
+    :map_options => {"auto_adjust" => true, "zoom" => 17,  
+                                      :raw => '{ 
+                                       panControl: true,
+                                       zoomControl: true,
+                                       mapTypeControl: false,
+                                       scaleControl: false,
+                                       streetViewControl: false,
+                                       overviewMapControl: false,
+                                       scrollwheel: false,
+                                       zoom: 17,
+                                       }' 
+                          },
+          :markers => { :data => @json  } 
+)%>
+
+<div id="ranchcontainer">
+<ul id="ranchlist"><h2>Find A Mash's Wing Ranch <span style="font-size:25px;"><sup>&reg;</sup></span></h2>
+<h1>Near You</h1></br>  
+<%= image_tag("locations/locations_line.png", :class => "lineseperator") %> 
+</ul>
+</div> 
+</div>

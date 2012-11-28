@@ -1,0 +1,26 @@
+  <center>
+  <p class="recordnumber"><%= pluralize(@mailing.size, 'mail') %> found<p>
+
+  <table class="listing" summary="Mailing List">
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Surname</th>
+      <th>Email Address</th>
+      <th>Company</th>
+      <th>Actions</th>
+    </tr>
+    <% @mailing.each do |mitem| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= mitem.id %></td>
+      <td><%= mitem.first_name %></td>
+      <td><%= mitem.second_name %></td>
+      <td><%= mitem.email %></td>
+      <td><%= mitem.company_name %></td>
+      <td>
+        <%= link_to("Delete", {:action => 'delete', :id => mitem.id}, :class => 'buttons') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</center>

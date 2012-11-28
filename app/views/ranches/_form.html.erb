@@ -1,0 +1,27 @@
+<%= error_messages_for(@ranch) %>
+<table summary="Ranch Form Fields">
+  <tr>
+    <th><%= f.label(:name,"Ranch Title") %></th>
+    <td><%= f.text_field(:name) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:address_line_1, "Address Line 1") %></th>
+    <td><%= f.text_field(:address_line_1) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:address_line_2, "Address Line 2") %></th>
+    <td><%= f.text_field(:address_line_2) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:town_city, "Town / City") %></th>
+    <td><%= f.text_field(:town_city) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:postcode, "Postcode") %></th>
+    <td><%= f.text_field(:postcode) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:telephone, "Telephone Number") %></th>
+    <td><%= f.text_field(:telephone) %></td>
+  </tr>
+</table>
