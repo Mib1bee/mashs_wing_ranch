@@ -12,10 +12,10 @@ development:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: mashs_wing_ranch_development
+  database: mash9295
   pool: 5
-  username: bhikha
-  password: 1805893vzrx2
+  username: mash9295
+  password: Tija9295!
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -25,18 +25,18 @@ test:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: mashs_wing_ranch_test
+  database: mash9295
   pool: 5
-  username: root
-  password:
+  username: mash9295
+  password: Tija9295!
   socket: /tmp/mysql.sock
 
 production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: mashs_wing_ranch_production
+  database: mash9295
   pool: 5
-  username: root
-  password:
+  username: mash9295
+  password: Tija9295!
   socket: /tmp/mysql.sock

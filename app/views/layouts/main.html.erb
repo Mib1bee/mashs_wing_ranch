@@ -5,15 +5,35 @@
 	<%= javascript_include_tag ('jquery/jquery.min','jq_scroll/jq_scroll_to','jq_scroll/jq_animate','jq_scroll/jq_anchor_scroll','jq_scroll/jq_local_scroll','jq_slider/jq_easing','jq_slider/jq_box_slider','jq_slider/jq_box','jq_parallax/jq_parallax','js_actions/do_parallax','js_actions/do_scrolling','js_actions/do_slider') %>
 	<%= stylesheet_link_tag "gmaps4rails" %>
 	<%= javascript_include_tag ('gmaps4rails/gmaps4rails.base','gmaps4rails/gmaps4rails.bing','gmaps4rails/gmaps4rails.googlemaps','gmaps4rails/gmaps4rails.mapquest','gmaps4rails/gmaps4rails.openlayers') %>
+
+</head>
+
+
 <script type="text/javascript">
 $(document).ready(function(){
 	main_parallax();
     main_scrolling();
     sauces_slider();
+});    
+</script>
+
+<script type="text/javascript">
+$(window).load(function () {
+	var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+	if (!is_chrome) {
+    if(!localStorage["alertdisplayed"]) {
+    alert("What's up rancher! Please use Google Chrome for the best website experience. Trust me... It's worth it!")
+    localStorage["alertdisplayed"] = true
+}
+}
 });
 </script>
 
-</head>
+<script type="text/javascript">
+$(window).load(function () {
+	$(window).scrollTop($(window).scrollTop()+1);
+});
+</script>
 
 <body>
 	<%= yield :scripts %>
@@ -21,7 +41,7 @@ $(document).ready(function(){
 	<%= render :partial => "shared/header" %>
 	<%= yield %>
 </div>
-
+	<%= render :partial => "shared/footer" %>
 </body>
 
 </html>

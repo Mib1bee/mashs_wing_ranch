@@ -1,5 +1,7 @@
 MashsWingRanch::Application.routes.draw do
 
+  get "company_stuff/index"
+
   get "test/index"
 
   root :to => "main#index"
@@ -8,6 +10,7 @@ MashsWingRanch::Application.routes.draw do
   match 'view_menu', :to => 'view_menu#index'
   match 'franchise', :to => 'franchise_application#index'
   match 'join_us', :to => 'join_us#index'
+  match 'company_stuff', :to => 'company_stuff#index'
   match ':controller(/:action(/:id))(.:format)'
 
 end

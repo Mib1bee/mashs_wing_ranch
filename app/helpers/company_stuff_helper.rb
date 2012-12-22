@@ -1,0 +1,2 @@
+module CompanyStuffHelper
+end

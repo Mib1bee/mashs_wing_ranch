@@ -14,4 +14,16 @@ function main_scrolling()
 	$("#social_link_landing").anchorScroll();
 	$("#ranches_link_landing").anchorScroll();
 	$("#rewards_link_landing").anchorScroll();
+
+}
+
+function menu_scrolling()
+{
+	$('#chicken_link').anchorScroll();
+	$('#burgers_link').anchorScroll();
+	$('#hotdogs_link').anchorScroll();
+	$('#subs_link').anchorScroll();
+	$('#wraps_link').anchorScroll();
+	$('#sizzlers_link').anchorScroll();
+	$('#sides_link').anchorScroll();
 }

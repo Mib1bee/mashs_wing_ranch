@@ -2,7 +2,7 @@
 	$.fn.anchorScroll = function(options) {
 		var defaults = {
 			speed: 1000,
-			fx: "jswing"
+			fx: "easeInOutCubic"
 		};	
 		//var version =  "1.0";
 		var options = $.extend(defaults, options);

@@ -10,6 +10,13 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	menu_parallax();
+	menu_scrolling();
+});
+</script>
+
+<script type="text/javascript">
+$(window).load(function () {
+	$(window).scrollTop($(window).scrollTop()+1);
 });
 </script>
 
@@ -21,7 +28,7 @@ $(document).ready(function(){
 	<%= render :partial => "shared/sec_header" %>
 	<%= yield %>
 </div>
-
+	<%= render :partial => "shared/sec_footer" %>
 </body>
 
 </html>

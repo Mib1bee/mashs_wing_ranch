@@ -1,0 +1,34 @@
+<div id="franchise_application_show">
+	<h1>Franchise Application</h1>
+	<h2>Date Of Application : <%= @fran.created_at.strftime("%d/%m/%Y") %> <h2>
+
+	<h3>Personal Details</h3>	
+		<p>
+			<span class="fran_title">Applicant : </span><span class="fran_text"><%= @fran.title %> <%= @fran.first_name %> <%= @fran.second_name %></span>
+		</p>
+		<p><span class="fran_title">Address : </span></br>
+		<span class ="fran_text"><%= @fran.address_line_1 %></br>
+		<%= @fran.town_city %></br>
+		<%= @fran.country %></br>
+		<%= @fran.postcode %></span>
+
+
+	<h3>Contact Details</h3>
+		<p>
+			<span class="fran_title">Contact Number : </span><span class="fran_text"><%= @fran.telephone %></span></br>
+			<span class="fran_title">Email : </span><span class="fran_text"><%= @fran.email %></span></br>
+			<span class="fran_title">Alt Number : </span><span class="fran_text"><%= @fran.alternative_telephone %></span></br>
+			<span class="fran_title">Pref Contact : </span><span class="fran_text"><%= @fran.preferred_contact %></span></br>
+			<span class="fran_title">Pref Contact Time : </span><span class="fran_text"><%= @fran.preferred_contact_time %></span>
+		</p>
+
+	<h3>Franchise Details</h3>
+		<p>
+			<span class="fran_title">Desired Investment : </span><span class="fran_text"><%= @fran.investment %></span></br>
+			<span class="fran_title">Investment Timeframe : </span><span class="fran_text"><%= @fran.timeframe %></span></br>
+			<span class="fran_title">Franchise Location : </span><span class="fran_text"><%= @fran.location_town_city %>, <%= @fran.location_country %></span></br>
+		</p>
+
+	<h3>Extra's</h3>
+		<p><span class="fran_text"><%= @fran.extra %></span></p>
+</div>

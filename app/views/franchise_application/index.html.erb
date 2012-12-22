@@ -10,9 +10,7 @@
 		<div id="franchiselinks">
 			<%= link_to "Franchise Information Pack ", asset_path('franchise/franchise_info_pack.pdf'), :class => "links" %>
 			</br></br>
-			<%= link_to '#terms', :id => 'terms_franchise', :class => 'links' do %>
-		    Terms Of Use
-			<% end %>
+			<%= link_to "Terms Of Use", {:controller => "company_stuff", :anchor => "terms"}, :class => "links" %>
 			<%= link_to root_path(:controller => 'main'), :class => 'links' do %>
 			Back To Main
 			<% end %>

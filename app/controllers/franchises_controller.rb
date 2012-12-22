@@ -15,6 +15,11 @@ class FranchisesController < ApplicationController
   	flash[:notice] = nil
   end
 
+  def show
+    @fran = Franchise.find(params[:id])
+    @pagetitle = "Franchise Application For #{@fran.title} #{@fran.second_name}"
+  end
+
   def delete
     @franchise = Franchise.find(params[:id])
     @pagetitle = "Delete Franchise Application"

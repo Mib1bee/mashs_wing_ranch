@@ -1,5 +1,5 @@
 <!-- START SUBS CONTAINER -->
-<span class="menuanchor" id="chicken"></span>
+<span class="menuanchor" id="m_subs"></span>
 		<div class="menucontainer">
 			<!-- START SUBS CONTENT -->
 			<div id="subscontent" class="menucontent">
@@ -11,6 +11,11 @@
 					<p><%= sub.description%></p>
 					</div>
 					<% end %>
+
+				</br></br>
+				<%= link_to root_path, :class => "links" do %>
+				Back To Main
+				<% end %>
 			</div>
 			<!-- END SUBS CONTENT -->
 		</div>

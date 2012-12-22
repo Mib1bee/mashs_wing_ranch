@@ -1,5 +1,5 @@
 <!-- START HOT DOG CONTAINER -->
-<span class="menuanchor" id="chicken"></span>
+<span class="menuanchor" id="m_hotdogs"></span>
 		<div class="menucontainer">
 			<!-- START HOT DOG CONTENT -->
 			<div id="hotdogcontent" class="menucontent">
@@ -11,6 +11,12 @@
 					<p><%= hotdog.description%></p>
 					</div>
 					<% end %>
+
+				</br></br>
+				<%= link_to root_path, :class => "links" do %>
+				Back To Main
+				<% end %>
+				
 			</div>
 			<!-- END HOT DOG CONTENT -->
 		</div>

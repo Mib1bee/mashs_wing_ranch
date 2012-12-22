@@ -3,15 +3,13 @@
 	<!-- START FRANCHISE CONTENT -->
 	<div id="rewardscontent">
 		<div id="rewardsbull"></div>
-		<div id="rewardscard"></div>
+		<div id="rewardsbull"></div>
 		<div id="rewardsheading">
 			<h2>Are You In Or Out ?</h2>
 			<h1>Ranch</br>Rewards</h1>
 		</div>
 		<div id="rewardslinks">
-			<%= link_to '#terms', :id => 'terms_franchise', :class => 'links' do %>
-		    Terms Of Use
-			<% end %>
+			<%= link_to "Terms Of Use", {:controller => "company_stuff", :anchor => "terms"}, :class => "links" %>
 			<%= link_to root_path(:controller => 'main'), :class => 'links' do %>
 			   Back To Main
 			<% end %>

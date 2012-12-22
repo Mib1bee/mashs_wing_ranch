@@ -1,5 +1,5 @@
 <!-- START BURGER CONTAINER -->
-<span class="menuanchor" id="chicken"></span>
+<span class="menuanchor" id="m_burgers"></span>
 		<div class="menucontainer">
 			<!-- START BURGER CONTENT -->
 			<div id="burgercontent" class="menucontent">
@@ -13,6 +13,10 @@
 					<p><%= burger.description%></p>
 					</div>
 					<% end %>
+				</br></br>
+				<%= link_to root_path, :class => "links" do %>
+				Back To Main
+				<% end %>
 			</div>
 			<!-- END BURGER CONTENT -->
 		</div>

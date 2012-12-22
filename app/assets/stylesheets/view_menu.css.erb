@@ -13,7 +13,6 @@
 	position:relative;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:0px;
 	overflow-x:hidden;
 	padding-left:250px;
 	padding-top:100px;
@@ -22,6 +21,45 @@
 	overflow-x:hidden;
 }
 /* END MENU CONTENT CLASS */
+
+#menunavigation{
+	position:fixed;
+	top:63px;
+	left:900px;
+	padding-top:30px;
+	z-index:1;
+	background-color:#f33434;
+}
+
+
+#menunavigation a {
+	color:white; 
+}
+
+
+#menunavigation ul{
+	list-style-type:none;
+	height:50px;
+}
+
+#menunavigation ul li{
+	display:block;
+ 	width:75px;
+ 	height:35px;
+	background-color:#f33434;
+	color:#f0e7cd;
+	border-top:1px solid #f65050;
+	padding:10px;  
+	*display:inline;
+	*zoom:1;
+	font-size:12px;
+	text-align:left;
+	vertical-align:middle;  
+}
+
+#menunavigation ul li:hover{
+	background-color:#cd3333;
+}
 
 #menuitem{
 	margin-top:30px;
@@ -67,7 +105,6 @@
 	font-size:16px;
 	color:#f0e7cd;
 	width:650px; 
-
 }
 /* END MENU CONTENT p*/
 
@@ -100,4 +137,37 @@
 
 #sidescontent{
 	background: url(view_menu/sides_bg.png) 50% 0 no-repeat fixed; 
+}
+
+#allmenuitems{
+
+}
+
+/* CSS FOR LINK STYLING FOR THIS SECTION OF WEBSITE */
+#allmenuitems a:link{
+	background-image:url(ranches/bull_link.png);
+	background-repeat:no-repeat;
+	background-position:right;
+	padding-right:30px; 
+	color:#b23232;
+	-webkit-transition: color 0.5s ease-in-out;
+	-moz-transition: color 0.5s ease-in-out;
+	-o-transition: color 0.5s ease-in-out;
+	transition: color 0.5s ease-in-out;
+}
+
+#allmenuitems a:visited{
+	color:#b23232;
+}
+
+#allmenuitems a:hover{
+	color:#ffffff;
+}
+/* END CSS FOR LINK STYLING FOR THIS SECTION OF WEBSITE */
+
+.menuanchor {
+    display: block;
+    height: 63px;
+    margin-top:-100px;
+    visibility:hidden;
 }
